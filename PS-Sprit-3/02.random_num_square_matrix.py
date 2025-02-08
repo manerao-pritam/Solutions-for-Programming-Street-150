@@ -1,9 +1,12 @@
-def generate_pattern(size):
+from random import randint
+
+
+def generate_random_num_matrix(size):
     matrix = []
 
     for r in range(size):
         row = []
-        for c in range(r + 1):
+        for c in range(size):
             row.append("*")
 
         matrix.append(row)
@@ -18,6 +21,6 @@ def print_matrix(matrix):
 
 
 if __name__ == '__main__':
-    print_matrix(generate_pattern(1))
-    print_matrix(generate_pattern(2))
-    print_matrix(generate_pattern(4))
+    print_matrix(generate_random_num_matrix(1))
+    print_matrix(generate_random_num_matrix(2))
+    print_matrix(generate_random_num_matrix(3))
